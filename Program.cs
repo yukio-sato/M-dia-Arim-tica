@@ -1,43 +1,78 @@
-﻿Console.ForegroundColor = ConsoleColor.DarkRed;
-for (int i = 0; i < 28; i++)
+﻿Console.Clear();
+Console.ForegroundColor = ConsoleColor.DarkRed;
+string frase = $"Média arimética de 3 números.\n";
+for (int i = 0; i < frase.Length; i++)
 {
-    Console.Write("Média arimética de 3 números"[i]);
+    Console.Write(frase[i]);
     Thread.Sleep(65);
 }
-Console.WriteLine("\n");
-Console.ForegroundColor = ConsoleColor.Gray;
-for (int i = 0; i < 26; i++)
+frase = "Digite o primeiro número: ";
+for (int i = 0; i < frase.Length; i++)
 {
-    Console.Write("Digite o primeiro número: "[i]);
+    if (i < frase.Length-1)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+    Console.Write(frase[i]);
     Thread.Sleep(65);
+    }
+    else
+    {        
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.Write(frase[i]);
+    Thread.Sleep(65);      
+    }
 }
-Console.ForegroundColor = ConsoleColor.DarkGreen;
 double primeiro = Convert.ToDouble(Console.ReadLine());
-Console.ForegroundColor = ConsoleColor.Gray;
-for (int i = 0; i < 26; i++)
+frase = $"Digite o segundo número: ";
+for (int i = 0; i < frase.Length; i++)
 {
-    Console.Write("Digite o segundo número:  "[i]);
+    if (i < frase.Length-1)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+    Console.Write(frase[i]);
     Thread.Sleep(65);
+    }
+    else
+    {        
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.Write(frase[i]);
+    Thread.Sleep(65);      
+    }
 }
-Console.ForegroundColor = ConsoleColor.DarkGreen;
 double segundo = Convert.ToDouble(Console.ReadLine());
-Console.ForegroundColor = ConsoleColor.Gray;
-for (int i = 0; i < 26; i++)
+frase = "Digite o terceiro número: ";
+for (int i = 0; i < frase.Length; i++)
 {
-    Console.Write("Digite o terceiro número: "[i]);
+      if (i < frase.Length-1)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+    Console.Write(frase[i]);
     Thread.Sleep(65);
+    }
+    else
+    {        
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.Write(frase[i]);
+    Thread.Sleep(65);      
+    }
 }
-Console.ForegroundColor = ConsoleColor.DarkGreen;
 double terceiro = Convert.ToDouble(Console.ReadLine());
 double media = (primeiro+segundo+terceiro)/3;
 Console.WriteLine("");
-Console.ForegroundColor = ConsoleColor.Gray;
-for (int i = 0; i < 13; i++)
+frase = $"Sua média é: {media:N1}\n";
+for (int i = 0; i < frase.Length; i++)
 {
-    Console.Write($"Sua média é: "[i]);
+       if (i < frase.Length-4)
+    {
+        Console.ForegroundColor = ConsoleColor.Gray;
+    Console.Write(frase[i]);
     Thread.Sleep(65);
+    }
+    else
+    {        
+        Console.ForegroundColor = ConsoleColor.Blue;
+    Console.Write(frase[i]);
+    Thread.Sleep(65);      
+    }
 }
-Console.ForegroundColor = ConsoleColor.DarkCyan;
-Console.Write($"{media:N1}");
-Console.WriteLine("");
 Console.ResetColor();
